@@ -1,0 +1,24 @@
+<h1>Liste d'articles</h1>
+<div class="container" *ngFor="let l of load">
+  <div *ngIf="isAllarticle()" class="listedetoutlesarticles">
+
+    <div class="article">
+      <li (click)="setSpecificarticle(true); process(l.userId, l.id, l.title, l.body)">{{l.title}}</li>
+    </div>
+
+  </div>
+
+
+</div>
+
+
+<div *ngIf="isSpecificarticle()">
+  <p>userId: {{userId}}</p>
+  <p>id: {{id}}</p>
+  <p>title: {{title}}</p>
+  <p>body: {{body}}</p>
+
+  <button (click)="del()">DELETE</button>
+
+
+</div>
