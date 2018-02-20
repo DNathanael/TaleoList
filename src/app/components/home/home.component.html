@@ -1,9 +1,12 @@
-<h1>Liste d'articles</h1>
-<div class="container" *ngFor="let l of load">
-  <div *ngIf="isAllarticle()" class="listedetoutlesarticles">
 
-    <div class="article">
-      <li (click)="setSpecificarticle(true); process(l.userId, l.id, l.title, l.body)">{{l.title}}</li>
+<div class="container">
+  <h1>Taleo Exercice</h1>
+
+<div class="container_main" *ngFor="let l of load">
+  <div *ngIf="isAllarticle()" class="article">
+
+    <div class="list-group">
+      <li class="list-group-item" (click)="setSpecificarticle(true); process(l.userId, l.id, l.title, l.body)">{{l.title}}</li>
     </div>
 
   </div>
@@ -15,10 +18,11 @@
 <div *ngIf="isSpecificarticle()">
   <p>userId: {{userId}}</p>
   <p>id: {{id}}</p>
-  <p>title: {{title}}</p>
+  <h2>title: {{title}}</h2>
   <p>body: {{body}}</p>
 
   <button (click)="del()">DELETE</button>
-
+  <button>SHARE</button>
+</div>
 
 </div>

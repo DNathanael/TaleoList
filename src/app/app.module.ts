@@ -7,12 +7,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 
 
-import { ClicklistComponent } from './components/clicklist/clicklist.component';
 import {RouterModule, Routes} from '@angular/router';
 
 
 import {GlobalService} from './services/global.service';
 import {ListService} from "./services/list.service";
+
+
 
 const appRoutes: Routes = [
 
@@ -26,11 +27,6 @@ const appRoutes: Routes = [
   {
     path: 'home',
     component: HomeComponent
-  },
-
-  {
-    path: 'clicklist',
-    component: ClicklistComponent
   }
 
 ];
@@ -42,8 +38,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ClicklistComponent,
-    ClicklistComponent,
     HomeComponent
   ],
   imports: [
